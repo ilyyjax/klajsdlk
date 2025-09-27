@@ -1,0 +1,52 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h1 {
+  font-size: 4rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Canvas covers entire background */
+#maskCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* X logo styling */
+.x-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.x-logo img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1); /* makes it white on black bg */
+  transition: transform 0.2s ease-in-out;
+}
+
+.x-logo img:hover {
+  transform: scale(1.2);
+}
